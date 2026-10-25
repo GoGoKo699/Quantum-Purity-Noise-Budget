@@ -120,7 +120,7 @@ The phase starts with the geometry of a single quantum state and ends with a com
 
 **Central question.** How much trace distance is necessary when both decision errors are at most $`\delta`$?
 
-**Understanding target.** For equal priors, optimal binary success is $`(1+T(\rho,\sigma))/2`$, where $`T(\rho,\sigma)=\frac12\|\rho-\sigma\|_1`$. Two errors at most $`\delta<1/2`$ imply average error at most $`\delta`$ and therefore require $`T(\rho,\sigma)\ge1-2\delta`$.
+**Understanding target.** For equal priors, optimal binary success is $`(1+T(\rho,\sigma))/2`$, where $`T(\rho,\sigma)=\frac12\|\rho-\sigma\|_1`$. Two errors at most $`\delta\lt 1/2`$ imply average error at most $`\delta`$ and therefore require $`T(\rho,\sigma)\ge1-2\delta`$.
 
 **Dependencies and story role.** [M04](#m04), [M06](#m06), [M07](#m07). This fixes the operational constant later propagated through C1.
 
@@ -274,7 +274,7 @@ The phase starts with the reference output of one acquisition channel. It develo
 
 **Central question.** What does the collision bound imply for every successful learner?
 
-**Understanding target.** Combining the Haar prior, Helstrom condition, and collision estimate gives $`m(m-1)\ge c_\delta/(\kappa-1/d)`$, where $`c_\delta=2\log[1+4(1-2\delta)^2]`$, when $`\kappa>1/d`$. This holds for every deterministically bounded-copy protocol with both errors at most $`\delta`$. If $`\kappa=1/d`$, every averaged alternative equals its null and no such worst-case test exists.
+**Understanding target.** Combining the Haar prior, Helstrom condition, and collision estimate gives $`m(m-1)\ge c_\delta/(\kappa-1/d)`$, where $`c_\delta=2\log[1+4(1-2\delta)^2]`$, when $`\kappa\gt 1/d`$. This holds for every deterministically bounded-copy protocol with both errors at most $`\delta`$. If $`\kappa=1/d`$, every averaged alternative equals its null and no such worst-case test exists.
 
 **Dependencies and story role.** [M06](#m06), [M08](#m08), [M09](#m09), [M15](#m15), [M17](#m17). This completes the general collective converse.
 
@@ -349,7 +349,7 @@ The phase starts with the reference output of one acquisition channel. It develo
 
 **Central question.** How are the purity floor, source-copy count, and numerical threshold connected?
 
-**Understanding target.** For a known $`a_n\le A_n`$ with $`\Delta_n=a_n-2^{-n}>0`$, independent bounded SWAP outcomes give each error at most $`\exp(-t\Delta_n^2/8)`$. U1 therefore uses $`2\lceil8\log(1/\delta)/\Delta_n^2\rceil`$ source copies. A known integer $`L_n\ge B_n`$ permits the exact dyadic procedure when $`n\ge2L_n+2`$; when $`L_n=O(\log n)`$, classical counters and comparisons use $`O(\log n)`$ bits.
+**Understanding target.** For a known $`a_n\le A_n`$ with $`\Delta_n=a_n-2^{-n}\gt 0`$, independent bounded SWAP outcomes give each error at most $`\exp(-t\Delta_n^2/8)`$. U1 therefore uses $`2\lceil8\log(1/\delta)/\Delta_n^2\rceil`$ source copies. A known integer $`L_n\ge B_n`$ permits the exact dyadic procedure when $`n\ge2L_n+2`$; when $`L_n=O(\log n)`$, classical counters and comparisons use $`O(\log n)`$ bits.
 
 **Dependencies and story role.** [M20](#m20), [M21](#m21), [M22](#m22). This completes the constructive guarantee, including calibration inputs and the two-copy cost per trial.
 
@@ -364,7 +364,7 @@ The phase starts with the reference output of one acquisition channel. It develo
 
 **Central question.** How do the converse and construction give an if-and-only-if statement for arbitrary rate sequences?
 
-**Understanding target.** At fixed $`0<\delta<1/2`$, an eventual bound $`M_n(\delta)\le Cn^k`$ exists exactly when $`B_n=O(\log n)`$, equivalently $`\Lambda_n=O(\log n)`$. In that regime, $`4^{-B_n}`$ is inverse polynomial and eventually dominates $`2^{-n}`$. Failure of an eventual logarithmic bound rules out a uniform polynomial bound, including for oscillating sequences; it need not imply superpolynomial growth at every size.
+**Understanding target.** At fixed $`0\lt \delta\lt 1/2`$, an eventual bound $`M_n(\delta)\le Cn^k`$ exists exactly when $`B_n=O(\log n)`$, equivalently $`\Lambda_n=O(\log n)`$. In that regime, $`4^{-B_n}`$ is inverse polynomial and eventually dominates $`2^{-n}`$. Failure of an eventual logarithmic bound rules out a uniform polynomial bound, including for oscillating sequences; it need not imply superpolynomial growth at every size.
 
 **Dependencies and story role.** [M18](#m18), [M20](#m20), [M23](#m23). This joins unrestricted collective necessity to a pairwise sufficient procedure.
 
@@ -454,7 +454,7 @@ The phase starts with the reference output of one acquisition channel. It develo
 
 **Central question.** What is the complete scientific claim once the converse, construction, and model boundaries are combined?
 
-**Understanding target.** For one fixed arbitrary pure source versus the maximally mixed source, with independent heterogeneous local depolarization before learner access and fixed error tolerance $`0<\delta<1/2`$, polynomial-copy learnability is equivalent to $`B_n=O(\log n)`$. C1 proves necessity for unrestricted collective measurements; U1 attains sufficiency with pairwise Bell measurements and polynomial resources given adequate noise information. The result specifies neither an optimal exponential constant nor a quantum-to-classical advantage ratio, and it does not classify arbitrary channels.
+**Understanding target.** For one fixed arbitrary pure source versus the maximally mixed source, with independent heterogeneous local depolarization before learner access and fixed error tolerance $`0\lt \delta\lt 1/2`$, polynomial-copy learnability is equivalent to $`B_n=O(\log n)`$. C1 proves necessity for unrestricted collective measurements; U1 attains sufficiency with pairwise Bell measurements and polynomial resources given adequate noise information. The result specifies neither an optimal exponential constant nor a quantum-to-classical advantage ratio, and it does not classify arbitrary channels.
 
 **Dependencies and story role.** [M18](#m18), [M23](#m23), [M24](#m24), [M25](#m25), [M27](#m27), [M28](#m28), [M29](#m29). This closes the local-to-global argument and states its conclusion with every operational qualification attached.
 

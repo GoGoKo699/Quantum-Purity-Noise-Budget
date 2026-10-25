@@ -53,7 +53,7 @@ Indeed, $`M_m-S_m`$ is positive on the symmetric subspace and negative on its or
 ```math
 \frac{s_4}{d^4}
 =\frac{\prod_{j=0}^{3}(1+j/d)}{4!}
-\le\frac5{16}<\frac13.
+\le\frac5{16}\lt \frac13.
 ```
 
 Thus four copies suffice for worst-case error at most $`1/3`$. The general lower bound is correspondingly constant in $`d`$. This is the noiseless collective-purity behavior; ordinary pairwise [SWAP purity measurements](../references/RELATED_WORK.md#ekert2002) also give a constant-copy test at fixed error.
@@ -116,7 +116,7 @@ m(m-1)
 \ge c_\delta\frac{re}{r-1}.
 ```
 
-For fixed $`\delta<1/2`$ this gives an $`\Omega(\sqrt e)`$ copy lower bound, uniformly for $`r\ge2`$. When $`r=1`$, the output is one-dimensional and the channel is a replacement channel.
+For fixed $`\delta\lt 1/2`$ this gives an $`\Omega(\sqrt e)`$ copy lower bound, uniformly for $`r\ge2`$. When $`r=1`$, the output is one-dimensional and the channel is a replacement channel.
 
 The ensemble $`\mathrm{Tr}_E\psi`$ for Haar-random $`\psi`$ is the induced-state ensemble studied in [Bansal et al., Appendix D, Theorem D.1](../references/RELATED_WORK.md#bansal2025). That work already proves collective indistinguishability from the maximally mixed state using permutation moments. The calculation here recovers its $`\sqrt e`$ lower-bound scale as a special case of C1; it does not supersede that work's sharper small-copy trace-distance estimate.
 
@@ -127,7 +127,7 @@ This example also separates an average-case lower bound from identifiability for
 =\frac1{\sqrt r}\sum_{j=1}^r|j\rangle_R|j\rangle_E.
 ```
 
-Then $`\mathrm{Tr}_E|\Psi\rangle\langle\Psi|=I_R/r=\sigma`$, making the worst-case promise problem impossible. If $`e<r`$, the reduced state of every pure input has rank at most $`e`$, so its purity is at least $`1/e>1/r`$. A SWAP test therefore distinguishes the hypotheses using $`O((1/e-1/r)^{-2}\log(1/\delta))`$ received copies. This last upper bound is not asserted to be optimal.
+Then $`\mathrm{Tr}_E|\Psi\rangle\langle\Psi|=I_R/r=\sigma`$, making the worst-case promise problem impossible. If $`e\lt r`$, the reduced state of every pure input has rank at most $`e`$, so its purity is at least $`1/e\gt 1/r`$. A SWAP test therefore distinguishes the hypotheses using $`O((1/e-1/r)^{-2}\log(1/\delta))`$ received copies. This last upper bound is not asserted to be optimal.
 
 ## The exact two-copy moment under local depolarization
 
@@ -218,7 +218,7 @@ u+gv&\sqrt{1-g}\,z\\
 \sigma_g=\frac12\begin{pmatrix}1+g&0\\0&1-g\end{pmatrix}.
 ```
 
-For $`g<1`$ the reference output is full rank. The adjoint acts as
+For $`g\lt 1`$ the reference output is full rank. The adjoint acts as
 
 ```math
 \mathcal N_g^\dagger
@@ -252,7 +252,7 @@ Equivalently, writing $`X,Y,Z`$ for the Pauli operators,
 =\frac{I+qxX+qyY+q^2zZ}{2}.
 ```
 
-Although $`\mathcal N_g`$ is nonunital when $`g>0`$, its Petz composition is unital, as required by C1. For a pure input, $`x^2+y^2+z^2=1`$, and the squared length of the output Bloch vector is
+Although $`\mathcal N_g`$ is nonunital when $`g\gt 0`$, its Petz composition is unital, as required by C1. For a pure input, $`x^2+y^2+z^2=1`$, and the squared length of the output Bloch vector is
 
 ```math
 q^2(x^2+y^2)+q^4z^2
@@ -266,7 +266,7 @@ Equatorial pure states attain this bound. Therefore
 \qquad
 \gamma(\mathcal N_g)=\frac{1+q^2}{2},
 \qquad
-m(m-1)\ge\frac{2c_\delta}{q}\qquad(0\le g<1).
+m(m-1)\ge\frac{2c_\delta}{q}\qquad(0\le g\lt 1).
 ```
 
 This is a valid lower bound, without a claim that its dependence on $`g`$ is optimal. The exact two-copy collision quantity follows because $`\mathcal K_g`$ has eigenvalues $`1,q,q,q^2`$ in the normalized Pauli operator basis:

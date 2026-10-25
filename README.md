@@ -14,7 +14,7 @@ B_n&=\sum_{i=1}^{n}(1-\eta_{n,i}^{2}).
 \end{aligned}
 ```
 
-At any fixed error tolerance $`0<\delta<1/2`$, the worst-case copy complexity satisfies
+At any fixed error tolerance $`0\lt \delta\lt 1/2`$, the worst-case copy complexity satisfies
 
 ```math
 \boxed{

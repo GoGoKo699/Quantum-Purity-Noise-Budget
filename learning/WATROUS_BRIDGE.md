@@ -106,7 +106,7 @@ At one copy the two agree. The point of the lower bound is to control the inform
 <a id="discrimination"></a>
 ## 4. Why an arbitrary learner is a discrimination problem
 
-A binary measurement is specified by an effect $`E`$ with $`0\le E\le I`$; the probability of declaring “pure” on a received state $`\omega`$ is $`\mathrm{Tr}(E\omega)`$. A valid test at error tolerance $`\delta<1/2`$ satisfies
+A binary measurement is specified by an effect $`E`$ with $`0\le E\le I`$; the probability of declaring “pure” on a received state $`\omega`$ is $`\mathrm{Tr}(E\omega)`$. A valid test at error tolerance $`\delta\lt 1/2`$ satisfies
 
 ```math
 \mathrm{Tr}(ES_m)\le\delta,
@@ -353,7 +353,7 @@ m(m-1)\ge\frac{c_\delta}{\kappa-1/d},
 c_\delta=2\log\!\left[1+4(1-2\delta)^2\right],
 ```
 
-when $`\kappa>1/d`$. At $`\delta=1/3`$, the constant is $`2\log(13/9)`$. This is [Theorem C1](../science/channel_bound.md#theorem-c1-finite-moment-and-copy-bounds), whose canonical proof states the quantifiers and support conditions together.
+when $`\kappa\gt 1/d`$. At $`\delta=1/3`$, the constant is $`2\log(13/9)`$. This is [Theorem C1](../science/channel_bound.md#theorem-c1-finite-moment-and-copy-bounds), whose canonical proof states the quantifiers and support conditions together.
 
 ### The complementary purity parameter
 
@@ -443,7 +443,7 @@ Only the $`P=Q`$ terms are retained in the inequality. The discarded terms are n
 The elementary inequality $`\log(1-3b/4)\ge-b\log4`$ for $`0\le b\le1`$ gives $`A_n\ge4^{-B_n}`$. The null output has purity $`2^{-n}`$. When
 
 ```math
-\Delta_n=4^{-B_n}-2^{-n}>0,
+\Delta_n=4^{-B_n}-2^{-n}\gt 0,
 ```
 
 independent SWAP measurements therefore separate the null mean from every alternative mean by at least $`\Delta_n`$. Thresholding the sample mean halfway between the two guarantees both errors at most $`\delta`$ using

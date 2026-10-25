@@ -18,7 +18,7 @@ For each integer $`n\geq1`$, let $`d_n=2^n`$ and consider the channel
 
 The source is promised to emit either $`I_{d_n}/d_n`$ or one fixed, unknown pure state $`\psi`$. Every copy passes through an independent use of $`\mathcal N_n`$ before it reaches the learner. Under the alternative, the output of $`m`$ uses is $`\mathcal N_n(\psi)^{\otimes m}`$: the pure state is fixed across copies, while the channel noise is independent across copies.
 
-Fix an error tolerance $`0<\delta<1/2`$. Write $`M_n(\delta)`$ for the minimum fixed maximum number of noisy source copies required by a test whose false-positive probability under the maximally mixed source and false-negative probability for every pure source are each at most $`\delta`$. All collective measurements, noiseless quantum memory, and noiseless processing are permitted. Set $`M_n(\delta)=\infty`$ when no such test exists.
+Fix an error tolerance $`0\lt \delta\lt 1/2`$. Write $`M_n(\delta)`$ for the minimum fixed maximum number of noisy source copies required by a test whose false-positive probability under the maximally mixed source and false-negative probability for every pure source are each at most $`\delta`$. All collective measurements, noiseless quantum memory, and noiseless processing are permitted. Set $`M_n(\delta)=\infty`$ when no such test exists.
 
 Define the two total budgets
 
@@ -40,7 +40,7 @@ All logarithms below are natural. The channel sequence, or a sufficient known up
 
 ## Theorem T1: polynomial learnability if and only if the budget is logarithmic
 
-For any sequence of channel parameters $`\{\eta_{n,j}:1\leq j\leq n\}_{n\geq1}`$ and any fixed $`0<\delta<1/2`$, the following statements are equivalent:
+For any sequence of channel parameters $`\{\eta_{n,j}:1\leq j\leq n\}_{n\geq1}`$ and any fixed $`0\lt \delta\lt 1/2`$, the following statements are equivalent:
 
 1. There are finite constants $`C,k,n_0`$ such that $`M_n(\delta)\leq Cn^k`$ for every $`n\geq n_0`$.
 2. $`B_n=O(\log n)`$.
@@ -53,10 +53,10 @@ For finite $`n`$, define
 ```math
 \kappa_n=\prod_{j=1}^{n}\frac{1+\eta_{n,j}^{2}}{2},
 \qquad
-c_\delta=2\log\!\left(1+4(1-2\delta)^2\right)>0.
+c_\delta=2\log\!\left(1+4(1-2\delta)^2\right)\gt 0.
 ```
 
-Every successful test using at most $`m`$ copies satisfies, when $`\kappa_n>2^{-n}`$,
+Every successful test using at most $`m`$ copies satisfies, when $`\kappa_n\gt 2^{-n}`$,
 
 ```math
 m(m-1)\geq\frac{c_\delta}{\kappa_n-2^{-n}}.
@@ -180,7 +180,7 @@ A_n=\prod_{j=1}^{n}\frac{1+3\eta_{n,j}^{2}}{4}
 \geq4^{-B_n}.
 ```
 
-The maximally mixed source has output purity $`2^{-n}`$. Taking $`a_n=4^{-B_n}`$ in U1 therefore gives, whenever $`a_n>2^{-n}`$,
+The maximally mixed source has output purity $`2^{-n}`$. Taking $`a_n=4^{-B_n}`$ in U1 therefore gives, whenever $`a_n\gt 2^{-n}`$,
 
 ```math
 M_n(\delta)
@@ -216,7 +216,7 @@ Polynomial learnability is therefore equivalent to $`n(1-\eta_n)=O(\log n)`$. Th
 
 ### Bounded and subextensive budgets
 
-If $`B_n\leq B_0<\infty`$, then, for every $`n\geq2B_0+1`$,
+If $`B_n\leq B_0\lt \infty`$, then, for every $`n\geq2B_0+1`$,
 
 ```math
 2\leq M_n(\delta)
@@ -246,7 +246,7 @@ The subextensive upper bound must not be extended to all budgets. Let $`n`$ be e
 |\Phi^+\rangle\langle\Phi^+|_{j,j+n/2}.
 ```
 
-Replacing one member of each Bell pair by a maximally mixed qubit makes the entire output exactly $`I_{2^n}/2^n`$. The pure-source and maximally mixed-source hypotheses therefore overlap, and $`M_n(\delta)=\infty`$ for every $`\delta<1/2`$. In this example,
+Replacing one member of each Bell pair by a maximally mixed qubit makes the entire output exactly $`I_{2^n}/2^n`$. The pure-source and maximally mixed-source hypotheses therefore overlap, and $`M_n(\delta)=\infty`$ for every $`\delta\lt 1/2`$. In this example,
 
 ```math
 B_n=n/2,

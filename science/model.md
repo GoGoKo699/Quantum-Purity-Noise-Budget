@@ -32,7 +32,7 @@ need not be maximally mixed or invertible. The [channel theorem](channel_bound.m
 
 ## 2. Minimax error and charged resources
 
-Fix an error tolerance $`0<\delta<1/2`$. A test is valid when both its null error and its error on every pure source are at most $`\delta`$. If $`E`$ is the effect corresponding to the decision “pure,” this means
+Fix an error tolerance $`0\lt \delta\lt 1/2`$. A test is valid when both its null error and its error on every pure source are at most $`\delta`$. If $`E`$ is the effect corresponding to the decision “pure,” this means
 
 ```math
 \mathrm{Tr}(E\sigma^{\otimes m})\le\delta,

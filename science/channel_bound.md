@@ -89,7 +89,7 @@ T(M_m,S_m)
 }.
 ```
 
-Let $`0<\delta<1/2`$. Suppose a protocol uses at most $`m`$ source copies, incorrectly declares the maximally mixed source to be pure with probability at most $`\delta`$, and incorrectly declares any pure source to be maximally mixed with probability at most $`\delta`$. The protocol may use unrestricted quantum memory, ancillas, adaptation and collective measurements after acquisition. If $`\kappa>1/d`$, it must satisfy
+Let $`0\lt \delta\lt 1/2`$. Suppose a protocol uses at most $`m`$ source copies, incorrectly declares the maximally mixed source to be pure with probability at most $`\delta`$, and incorrectly declares any pure source to be maximally mixed with probability at most $`\delta`$. The protocol may use unrestricted quantum memory, ancillas, adaptation and collective measurements after acquisition. If $`\kappa\gt 1/d`$, it must satisfy
 
 ```math
 m(m-1)
@@ -99,7 +99,7 @@ m(m-1)
 c_\delta=2\log\bigl(1+4(1-2\delta)^2\bigr).
 ```
 
-At $`\delta=1/3`$, $`c_\delta=2\log(13/9)`$. If $`\kappa=1/d`$, no such protocol exists for any finite number of copies. Equivalently, when $`\kappa>1/d`$ the real-valued copy lower bound is
+At $`\delta=1/3`$, $`c_\delta=2\log(13/9)`$. If $`\kappa=1/d`$, no such protocol exists for any finite number of copies. Equivalently, when $`\kappa\gt 1/d`$ the real-valued copy lower bound is
 
 ```math
 m\ge
@@ -290,7 +290,7 @@ To prove this, fix $`\omega=\mathcal K(\phi)`$. For every nontrivial cycle of le
 
 A permutation moving exactly $`k`$ objects thus contributes at most $`\gamma^{k/2}`$, and there are $`\binom mkD_k`$ such permutations. Insert this bound in the same exact moment identity used for C1.
 
-Since $`\binom mkD_k\le m^k`$, putting $`x=m\sqrt\gamma<1`$ gives the convenient consequence
+Since $`\binom mkD_k\le m^k`$, putting $`x=m\sqrt\gamma\lt 1`$ gives the convenient consequence
 
 ```math
 \chi^2_{1/2}(M_m\|S_m)
@@ -304,7 +304,7 @@ In particular, let $`a=1-2\delta`$ and $`r_\delta=2a(\sqrt{1+a^2}-a)\in(0,1)`$. 
 m\ge\frac{r_\delta}{\sqrt\gamma}.
 ```
 
-For $`m\sqrt\gamma<1`$ this follows by solving $`x^2/(1-x)\ge4a^2`$; for $`m\sqrt\gamma\ge1`$ it holds immediately. The finite product in C1 retains the exact replacement-channel limit, so C2 is a complementary bound rather than a uniform improvement.
+For $`m\sqrt\gamma\lt 1`$ this follows by solving $`x^2/(1-x)\ge4a^2`$; for $`m\sqrt\gamma\ge1`$ it holds immediately. The finite product in C1 retains the exact replacement-channel limit, so C2 is a complementary bound rather than a uniform improvement.
 
 ## An exact second-moment identity
 

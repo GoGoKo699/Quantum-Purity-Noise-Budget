@@ -67,19 +67,19 @@ Apply this to $`b_j=1-\eta_{n,j}^2`$ and multiply over sites to obtain $`A_n\geq
 
 ## Theorem U1: a uniform two-copy test
 
-Fix $`n\geq1`$ and $`0<\delta<1/2`$. Suppose a known number $`a_n`$ satisfies
+Fix $`n\geq1`$ and $`0\lt \delta\lt 1/2`$. Suppose a known number $`a_n`$ satisfies
 
 ```math
-2^{-n}<a_n\leq A_n,
+2^{-n}\lt a_n\leq A_n,
 \qquad
-\Delta_n=a_n-2^{-n}>0.
+\Delta_n=a_n-2^{-n}\gt 0.
 ```
 
 On each of $`t`$ independent pairs of noisy source copies, measure the global SWAP observable and record $`X_i\in\{-1,+1\}`$. Declare the source pure if
 
 ```math
 \frac1t\sum_{i=1}^{t}X_i
->\frac{a_n+2^{-n}}2,
+\gt \frac{a_n+2^{-n}}2,
 ```
 
 and declare it maximally mixed otherwise. Both the false-positive probability under the maximally mixed source and the false-negative probability for every pure source are at most $`\delta`$ whenever
@@ -153,7 +153,7 @@ Set $`a=4^{-L_n}=2^{-2L_n}`$. Every pure-source output has purity at least $`a`$
 
 ```math
 \text{declare pure if}\qquad
-2^{2L_n+1}\sum_{i=1}^{t}X_i>t.
+2^{2L_n+1}\sum_{i=1}^{t}X_i\gt t.
 ```
 
 The null mean is at least $`a/4`$ below this threshold and every alternative mean is at least $`a/2`$ above it. Hence
