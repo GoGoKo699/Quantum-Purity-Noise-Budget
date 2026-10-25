@@ -66,3 +66,8 @@ Scientific distinctions to preserve:
   are inherited. Read the explicit attribution before making originality claims.
 - Finite double-precision checks support the tested formulas and examples;
   they do not prove all-dimension results or establish external peer review.
+
+Learning entrypoints:
+- learning/WATROUS_BRIDGE.md: single selected anchor John Watrous, The Theory of Quantum Information (2018); Chapters 2, 3, 7, notation translation and local proof bridge.
+- learning/MILESTONES.md: exactly 30 project-intrinsic targets; 14 background/preliminaries and 16 narrative/innovation; dependencies, conceptual connections and science/source pointers.
+- For study, use the milestone map with the Watrous bridge; the personal coaching protocol and learner records are not in this repository.
