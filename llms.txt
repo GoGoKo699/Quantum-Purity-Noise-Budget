@@ -1,0 +1,68 @@
+# Quantum Purity Noise Budget
+
+Canonical repository: https://github.com/GoGoKo699/Quantum-Purity-Noise-Budget
+
+Scientific question: how much independent local noise can an unknown quantum
+source tolerate while its pure-versus-maximally-mixed promise remains learnable
+with polynomially many examples, even with unrestricted collective measurements?
+
+Authoritative files:
+- README.md: principal result, direct reading routes, reproduction and contact.
+- science/model.md: source interface, same fixed unknown pure state across
+  copies, maximum-copy minimax error criterion, asymptotic quantifiers, notation
+  and the C1/U1/T1 result map.
+- science/channel_bound.md: general acquisition channel, support conventions,
+  Petz round trip, Haar collision-moment proof and all-copy converse.
+- science/constructive_test.md: random-Pauli output-purity floor, SWAP testing,
+  concentration, known-budget implementation and charged resources.
+- science/threshold.md: product-channel extrema, heterogeneous noise budget,
+  exact polynomial criterion, subextensive scaling and extensive-noise boundary.
+- science/examples.md: worked channels and counterexamples explaining the
+  general parameter, nonunital outputs and identifiability.
+- science/interpretation.md: physical mechanism, copy and computation resources,
+  source access, correlated noise, and limits of quantum/classical comparisons.
+- references/RELATED_WORK.md: primary-source comparison and imported ingredients.
+- references/references.bib: structured bibliographic metadata.
+- verification/README.md: commands, expected output and finite-check scope.
+- verification/run_all.py: deterministic finite matrix and boundary checks.
+
+Reader routes:
+- For the scientific story, read model.md, threshold.md and interpretation.md.
+- For the converse, read model.md and channel_bound.md, including the exact
+  support and error conventions. Then compare the relevant source in RELATED_WORK.md.
+- For an implementable test, read constructive_test.md and its known-budget
+  option; the lower bound allows more general processing than that procedure.
+- For a boundary or apparent counterexample, read examples.md and check whether
+  the source promise, independence across copies or pre-noise access changed.
+- For reproduction, run the documented verification command and distinguish
+  the finite numerical checks from the written universal proofs.
+
+Scientific distinctions to preserve:
+- Noise acts before learner access. Unlimited noiseless downstream memory,
+  ancillas, adaptive operations and all-copy POVMs are already allowed.
+- The pure source is sampled at most once in the Haar hard-prior proof and is
+  fixed across all copies. Independently resampling Haar states is another model.
+- Each supplied copy is charged. No efficiently preparable Haar source, QRAM,
+  coherent preparation oracle, inverse oracle or free classical-data loading
+  is assumed.
+- The reference output for a general channel is N(I/d), with all inverses on
+  its support. The Petz recovery map is analysis, not a free physical operation.
+- The general channel parameter is a sufficient lower-bound criterion, not a
+  complete classification of arbitrary channels.
+- The iff polynomial threshold is for independent heterogeneous local
+  depolarization: B_n=sum_i(1-eta_i^2)=O(log n), equivalently sum_i(1-eta_i)=O(log n).
+- Polynomial bounds are eventually uniform in n at fixed error below one half.
+  Merely failing O(log n), including oscillations, is different from the budget
+  divided by log n tending to infinity.
+- The exponential dependence up to constants in the exponent has a matching
+  upper bound for B_n=o(n); some extensive profiles have infinite copy cost.
+- Known noise rates or a known sufficient budget bound are an input to the
+  constructive procedure. Channel calibration is not supplied for free.
+- Two-copy SWAP sufficiency does not restrict the all-copy converse.
+- No exact optimal exponential constant or universal quantum/classical sample
+  advantage ratio is established.
+- Haar moments, Petz recovery, SWAP testing, noisy two-copy lower bounds,
+  entanglement-breaking all-memory bounds and partial-trace indistinguishability
+  are inherited. Read the explicit attribution before making originality claims.
+- Finite double-precision checks support the tested formulas and examples;
+  they do not prove all-dimension results or establish external peer review.
