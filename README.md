@@ -61,6 +61,11 @@ The pure-versus-maximally-mixed learning problem, Haar moment identities, Petz r
 
 The result developed here combines an unrestricted collective converse for weak local acquisition noise with a matching heterogeneous polynomial-complexity threshold. The general-channel proof supplies a sufficient hardness criterion; it is not an if-and-only-if classification of arbitrary channels. The [source-by-source comparison](references/RELATED_WORK.md) identifies both the overlap and the distinct operational claim.
 
+
+## Learn the project
+
+The single educational anchor is **John Watrous, *The Theory of Quantum Information* (2018)**. The [Watrous bridge](learning/WATROUS_BRIDGE.md) maps Chapters 2, 3 and 7 to this project's states, channel converse and Haar-moment proof, distinguishing textbook foundations from new derivations. The [30-milestone map](learning/MILESTONES.md) organizes 14 background/preliminary targets and 16 narrative/innovation targets, from local objects to the complete logarithmic noise threshold. These are learner-independent reading routes, not personalized coaching records.
+
 ## Reproduce the finite checks
 
 From the repository root, using Python 3.12:
