@@ -22,7 +22,7 @@ The runner performs no network access and does not write output files. It exits 
 | [verify_noise_general.py](verify_noise_general.py) | Applies amplitude damping to Haar moments and forms the nonuniform reference output directly | The sandwiched collision expression, trace-distance comparison, channel bound, exact two-copy value and rank-deficient full-replacement limit |
 | [verify_boundaries.py](verify_boundaries.py) | Constructs entangled, dephased and correlated-noise examples as explicit matrices | Exact overlap of the two promises after replacing half of a maximally entangled state; failure of the channel parameter to classify full dephasing; preservation of SWAP information under shared noise despite identical one-copy marginals |
 
-Haar moments are represented by their exact finite permutation formula and then evaluated in double-precision arithmetic. These are not symbolic exact-arithmetic checks. Tolerances are at most a few times $10^{-11}$ for the tested inequalities; they accommodate floating-point roundoff rather than an analytical error term. The fixed random seed makes the selected pure-state examples reproducible, and their sample count is not evidence for all pure states.
+Haar moments are represented by their exact finite permutation formula and then evaluated in double-precision arithmetic. These are not symbolic exact-arithmetic checks. Tolerances are at most a few times $`10^{-11}`$ for the tested inequalities; they accommodate floating-point roundoff rather than an analytical error term. The fixed random seed makes the selected pure-state examples reproducible, and their sample count is not evidence for all pure states.
 
 The local suite also checks the independently derived identity
 
@@ -31,7 +31,7 @@ The local suite also checks the independently derived identity
 =\frac{\prod_i(1+3\eta_i^4)-1}{(2^n+1)^2}.
 ```
 
-The bound can be strict: for one qubit, the exact expression is $\eta^4/3$, whereas the finite maximum-eigenvalue bound gives $\eta^2/3$. The suite does not treat an upper bound as an exact sample rate.
+The bound can be strict: for one qubit, the exact expression is $`\eta^4/3`$, whereas the finite maximum-eigenvalue bound gives $`\eta^2/3`$. The suite does not treat an upper bound as an exact sample rate.
 
 ## What the checks establish
 

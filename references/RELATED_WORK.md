@@ -13,7 +13,7 @@ The relevant comparisons involve three separate choices: the promise on the orig
 
 **Jordan Cotler, Weiyuan Gong and Ishaan Kannan.** “Noisy quantum learning theory.” *Nature Communications* **17**, 6979 (2026). [Published article](https://doi.org/10.1038/s41467-026-73693-x); [open full text](https://pmc.ncbi.nlm.nih.gov/articles/PMC13392386/); [arXiv:2512.10929v2](https://arxiv.org/html/2512.10929v2).
 
-**Locator and assumptions.** Published Theorem 2.4; preprint Appendix E.1, Theorem E.2 and Eq. (31). The learner makes adaptive measurements on pairs of independently depolarized copies, retaining classical information between pairs. With their replacement-noise parameter $\lambda=1-\eta$, the lower bound is
+**Locator and assumptions.** Published Theorem 2.4; preprint Appendix E.1, Theorem E.2 and Eq. (31). The learner makes adaptive measurements on pairs of independently depolarized copies, retaining classical information between pairs. With their replacement-noise parameter $`\lambda=1-\eta`$, the lower bound is
 
 $$
 \Omega\!\left(\min\left\{2^{n/2},
@@ -29,9 +29,9 @@ Theorem numbering above was checked in the January 14, 2026 preprint and the pub
 
 **Sujeet Bhalerao, Theshani Nuradha and Felix Leditzky.** “High quantum local differential privacy breaks entanglement.” [arXiv:2609.13418v1](https://arxiv.org/html/2609.13418v1), September 11, 2026.
 
-**Locator and assumptions.** Section V, Theorems V.1 and V.4. The simulation theorem permits arbitrary quantum memory and binary output, but requires the acquisition channel to be entanglement breaking. For a tensor product of local entanglement-breaking channels, their purity theorem gives an $\Omega(2^{n/2})$ lower bound when success is required for every pure input.
+**Locator and assumptions.** Section V, Theorems V.1 and V.4. The simulation theorem permits arbitrary quantum memory and binary output, but requires the acquisition channel to be entanglement breaking. For a tensor product of local entanglement-breaking channels, their purity theorem gives an $`\Omega(2^{n/2})`$ lower bound when success is required for every pure input.
 
-**Relation.** Arbitrary-memory noisy-purity lower bounds therefore already exist. The distinction here is a bound that applies to weak local depolarization as well, without requiring entanglement breaking, and the resulting heterogeneous polynomial-sample criterion. For the convention $\mathcal D_\eta(\rho)=\eta\rho+(1-\eta)I/2$, the qubit entanglement-breaking condition is $\eta\le1/3$; see [Ruskai](#ruskai2003).
+**Relation.** Arbitrary-memory noisy-purity lower bounds therefore already exist. The distinction here is a bound that applies to weak local depolarization as well, without requiring entanglement breaking, and the resulting heterogeneous polynomial-sample criterion. For the convention $`\mathcal D_\eta(\rho)=\eta\rho+(1-\eta)I/2`$, the qubit entanglement-breaking condition is $`\eta\le1/3`$; see [Ruskai](#ruskai2003).
 
 Their global high-privacy bounds, including Corollary V.6, impose another channel restriction and should not be conflated with arbitrary weak local noise. This source is a preprint, not a verified journal publication.
 
@@ -40,9 +40,9 @@ Their global high-privacy bounds, including Corollary V.6, impose another channe
 
 **Nikhil Bansal, Wai-Keong Mok, Kishor Bharti, Dax Enshan Koh and Tobias Haug.** “Pseudorandom Density Matrices.” *PRX Quantum* **6**, 020322 (2025). [Published article](https://doi.org/10.1103/PRXQuantum.6.020322); [arXiv:2407.11607v2](https://arxiv.org/html/2407.11607v2).
 
-**Locator and assumptions.** Theorem 1 and Appendix D, Theorem D.1. Tracing $k$ qubits out of a Haar state gives a mixed-state ensemble whose $t$-copy average is within $O(t^2/2^k)$ trace distance of the maximally mixed $t$-copy state. This is an information-theoretic statement allowing collective measurements; the computational assumptions used elsewhere for pseudorandom constructions are unnecessary for this theorem.
+**Locator and assumptions.** Theorem 1 and Appendix D, Theorem D.1. Tracing $`k`$ qubits out of a Haar state gives a mixed-state ensemble whose $`t`$-copy average is within $`O(t^2/2^k)`$ trace distance of the maximally mixed $`t`$-copy state. This is an information-theoretic statement allowing collective measurements; the computational assumptions used elsewhere for pseudorandom constructions are unnecessary for this theorem.
 
-**Relation.** Partial trace is a direct antecedent and special case of the channel setting. The Petz round trip for $\operatorname{Tr}_E$ is $X\mapsto\operatorname{Tr}_E(X)\otimes I_E/d_E$, with maximum output eigenvalue $1/d_E$. The bound here recovers the $\sqrt{d_E}$ sample lower-bound scale; its generic trace-distance estimate does not improve their sharper small-$t$ estimate. Their permutation-cycle moment expansion is also prior mathematical machinery. The local-depolarizing threshold concerns a different channel family.
+**Relation.** Partial trace is a direct antecedent and special case of the channel setting. The Petz round trip for $`\mathrm{Tr}_E`$ is $`X\mapsto\mathrm{Tr}_E(X)\otimes I_E/d_E`$, with maximum output eigenvalue $`1/d_E`$. The bound here recovers the $`\sqrt{d_E}`$ sample lower-bound scale; its generic trace-distance estimate does not improve their sharper small-$`t`$ estimate. Their permutation-cycle moment expansion is also prior mathematical machinery. The local-depolarizing threshold concerns a different channel family.
 
 Appendix numbering was checked in v2, January 31, 2025.
 
@@ -64,7 +64,7 @@ The version checked is v2, September 9, 2026, the publication date.
 
 **Sitan Chen, Jordan Cotler, Hsin-Yuan Huang and Jerry Li.** “Exponential Separations Between Learning With and Without Quantum Memory.” *2021 IEEE 62nd Annual Symposium on Foundations of Computer Science*, pp. 574–585, proceedings published 2022. [DOI](https://doi.org/10.1109/FOCS52979.2021.00063); [arXiv:2111.05881v2](https://arxiv.org/html/2111.05881v2).
 
-In the full preprint, Theorems 5.11 and 5.13 give matching $\Theta(2^{n/2})$ sample complexity for pure-versus-maximally-mixed testing without quantum memory. Table 1 contrasts this with constant-copy testing with memory. This is the baseline task. The exponent is $n/2$, not $n$. The present lower bound concerns noisy acquisition while granting the learner unrestricted memory.
+In the full preprint, Theorems 5.11 and 5.13 give matching $`\Theta(2^{n/2})`$ sample complexity for pure-versus-maximally-mixed testing without quantum memory. Table 1 contrasts this with constant-copy testing with memory. This is the baseline task. The exponent is $`n/2`$, not $`n`$. The present lower bound concerns noisy acquisition while granting the learner unrestricted memory.
 
 <a id="berta2021"></a>
 ### Berta, Brandão and Hirche: composite quantum hypothesis testing
@@ -73,7 +73,7 @@ In the full preprint, Theorems 5.11 and 5.13 give matching $\Theta(2^{n/2})$ sam
 
 Section 1, Eqs. (9)–(12) and Theorem 1.1 consider asymmetric testing of mixtures of tensor powers, with fixed finite-dimensional one-copy state spaces and closed convex sets. The result characterizes asymptotic error exponents through regularized relative entropy.
 
-This provides context for composite alternatives and correlated mixture states. It is not an imported finite-sample theorem for the dimension-growing pure-state promise. In particular, forming a convex hull of pure states *before* taking tensor powers would include the maximally mixed state and change the problem. The Haar average of repeated copies must remain $\mathbb E_\psi[\mathcal N(\psi)^{\otimes m}]$.
+This provides context for composite alternatives and correlated mixture states. It is not an imported finite-sample theorem for the dimension-growing pure-state promise. In particular, forming a convex hull of pure states *before* taking tensor powers would include the maximally mixed state and change the problem. The Haar average of repeated copies must remain $`\mathbb E_\psi[\mathcal N(\psi)^{\otimes m}]`$.
 
 The checked v2, July 23, 2021, states that it matches the published version and includes corrections.
 
@@ -165,7 +165,7 @@ The author manuscript, titled *From Classical to Quantum Shannon Theory* and dat
 
 **Martin Müller-Lennert, Frédéric Dupuis, Oleg Szehr, Serge Fehr and Marco Tomamichel.** “On quantum Rényi entropies: A new generalization and some properties.” *Journal of Mathematical Physics* **54**, 122203 (2013). [DOI](https://doi.org/10.1063/1.4838856); [arXiv:1306.3142v4](https://arxiv.org/abs/1306.3142v4).
 
-This is a source for the sandwiched Rényi family. With natural logarithms, the collision quantity used here is $\exp(\widetilde D_2(\rho\Vert\sigma))-1$. It is not the unsandwiched expression $\operatorname{Tr}(\rho^2\sigma^{-1})-1$. The needed trace-distance inequality is proved locally.
+This is a source for the sandwiched Rényi family. With natural logarithms, the collision quantity used here is $`\exp(\widetilde D_2(\rho\Vert\sigma))-1`$. It is not the unsandwiched expression $`\mathrm{Tr}(\rho^2\sigma^{-1})-1`$. The needed trace-distance inequality is proved locally.
 
 <a id="ekert2002"></a>
 ### Ekert et al.: SWAP measurements of purity
@@ -179,7 +179,7 @@ Their controlled-SWAP construction directly estimates state overlaps and purity.
 
 **Mary Beth Ruskai.** “Qubit Entanglement Breaking Channels.” *Reviews in Mathematical Physics* **15**, 643–662 (2003). [DOI](https://doi.org/10.1142/S0129055X03001710); [arXiv:quant-ph/0302032v3](https://arxiv.org/html/quant-ph/0302032v3).
 
-Theorem 4 states that a unital qubit channel in canonical Bloch form is entanglement breaking exactly when the sum of the absolute values of its three diagonal parameters is at most one. Substituting $(\eta,\eta,\eta)$ yields the $\eta\le1/3$ boundary used in the comparison above.
+Theorem 4 states that a unital qubit channel in canonical Bloch form is entanglement breaking exactly when the sum of the absolute values of its three diagonal parameters is at most one. Substituting $`(\eta,\eta,\eta)`$ yields the $`\eta\le1/3`$ boundary used in the comparison above.
 
 ## Scope of the comparison
 

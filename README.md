@@ -2,19 +2,19 @@
 
 **Independent noise at the source imposes a logarithmic budget for learning purity, even with unlimited quantum memory and collective measurements.**
 
-An unknown $n$-qubit source is promised to produce either one fixed pure state or the maximally mixed state. Each copy passes through independent local depolarization before the learner receives it. The learner may then retain every copy and perform arbitrary noiseless quantum processing.
+An unknown $`n`$-qubit source is promised to produce either one fixed pure state or the maximally mixed state. Each copy passes through independent local depolarization before the learner receives it. The learner may then retain every copy and perform arbitrary noiseless quantum processing.
 
-For site-dependent retention parameters $0\le\eta_{n,i}\le1$, define
+For site-dependent retention parameters $`0\le\eta_{n,i}\le1`$, define
 
 ```math
-\mathcal N_n=\bigotimes_{i=1}^{n}\mathcal D_{\eta_{n,i}},
-\qquad
-\mathcal D_\eta(X)=\eta X+(1-\eta)\operatorname{Tr}(X)I/2,
-\qquad
-B_n=\sum_{i=1}^{n}(1-\eta_{n,i}^{2}).
+\begin{aligned}
+\mathcal N_n&=\bigotimes_{i=1}^{n}\mathcal D_{\eta_{n,i}},\\
+\mathcal D_\eta(X)&=\eta X+(1-\eta)\mathrm{Tr}(X)I/2,\\
+B_n&=\sum_{i=1}^{n}(1-\eta_{n,i}^{2}).
+\end{aligned}
 ```
 
-At any fixed error tolerance $0<\delta<1/2$, the worst-case copy complexity satisfies
+At any fixed error tolerance $`0\lt \delta\lt 1/2`$, the worst-case copy complexity satisfies
 
 ```math
 \boxed{
@@ -24,7 +24,7 @@ B_n=O(\log n).
 }
 ```
 
-Equivalently, the expected number of locally replaced sites per copy in the channel's replacement realization, $\Lambda_n=\sum_i(1-\eta_{n,i})$, must be $O(\log n)$, because $\Lambda_n\le B_n\le2\Lambda_n$. In the homogeneous case this is $n(1-\eta_n)=O(\log n)$.
+Equivalently, the expected number of locally replaced sites per copy in the channel's replacement realization, $`\Lambda_n=\sum_i(1-\eta_{n,i})`$, must be $`O(\log n)`$, because $`\Lambda_n\le B_n\le2\Lambda_n`$. In the homogeneous case this is $`n(1-\eta_n)=O(\log n)`$.
 
 ## Results
 
@@ -34,9 +34,9 @@ Equivalently, the expected number of locally replaced sites per copy in the chan
 | **Constructive test** | A uniform output-purity floor for every pure input, resolved by two-copy SWAP measurements with an explicit error bound | [Constructive test, U1](science/constructive_test.md) |
 | **Logarithmic noise threshold** | A necessary and sufficient criterion for polynomial copy complexity under heterogeneous local depolarization, with a polynomial-gate sufficient procedure | [Threshold, T1](science/threshold.md) |
 
-The lower bound gives exponential sample cost for any fixed nonzero local noise rate on a positive fraction of sites. A logarithmic total budget remains learnable, even if a logarithmic number of sites are completely depolarized. The positive procedure uses two $n$-qubit registers and $O(n)$ gates per pair test.
+The lower bound gives exponential sample cost for any fixed nonzero local noise rate on a positive fraction of sites. A logarithmic total budget remains learnable, even if a logarithmic number of sites are completely depolarized. The positive procedure uses two $`n`$-qubit registers and $`O(n)`$ gates per pair test.
 
-For subextensive budgets $B_n=o(n)$, upper and lower bounds establish exponential dependence on $B_n$ up to constants in the exponent. Exact optimal exponents are not claimed. Some extensive profiles make a pure source and the mixed source exactly identical after noise, so their sample complexity is infinite.
+For subextensive budgets $`B_n=o(n)`$, upper and lower bounds establish exponential dependence on $`B_n`$ up to constants in the exponent. Exact optimal exponents are not claimed. Some extensive profiles make a pure source and the mixed source exactly identical after noise, so their sample complexity is infinite.
 
 ## Read the science
 
@@ -55,16 +55,17 @@ Start with the [source model and precise claims](science/model.md). The [channel
 
 [The LLM reading guide](llms.txt) maps questions to their authoritative scientific files.
 
+## Study the project
+
+The educational anchor is John Watrous, *The Theory of Quantum Information* (2018). The [source-to-project bridge](learning/WATROUS_BRIDGE.md) selects the relevant sections, translates the notation and explains how state discrimination and Haar moments lead into the channel converse and the constructive test. The bridge supplies the project-specific steps without requiring the whole book as a prerequisite.
+
+The [30-milestone map](learning/MILESTONES.md) follows the scientific dependencies in two phases. **Twelve background milestones** build from states and channels to the clean collective testing problem. **Eighteen narrative milestones** connect the noise-normalization argument, the attainable purity signal and the logarithmic threshold, ending with the result's scope and physical interpretation. Each milestone states a central question, an understanding target, dependencies, a conceptual connection and precise source pointers.
+
 ## Relation to established results
 
 The pure-versus-maximally-mixed learning problem, Haar moment identities, Petz recovery and SWAP purity estimation are established ingredients. Closest precedents include [noisy adaptive two-copy learning](references/RELATED_WORK.md#cgk2026), [arbitrary-memory bounds for entanglement-breaking noise](references/RELATED_WORK.md#bhalerao2026), and [collective indistinguishability of reduced Haar states](references/RELATED_WORK.md#bansal2025).
 
 The result developed here combines an unrestricted collective converse for weak local acquisition noise with a matching heterogeneous polynomial-complexity threshold. The general-channel proof supplies a sufficient hardness criterion; it is not an if-and-only-if classification of arbitrary channels. The [source-by-source comparison](references/RELATED_WORK.md) identifies both the overlap and the distinct operational claim.
-
-
-## Learn the project
-
-The single educational anchor is **John Watrous, *The Theory of Quantum Information* (2018)**. The [Watrous bridge](learning/WATROUS_BRIDGE.md) maps Chapters 2, 3 and 7 to this project's states, channel converse and Haar-moment proof, distinguishing textbook foundations from new derivations. The [30-milestone map](learning/MILESTONES.md) organizes 14 background/preliminary targets and 16 narrative/innovation targets, from local objects to the complete logarithmic noise threshold. These are learner-independent reading routes, not personalized coaching records.
 
 ## Reproduce the finite checks
 
