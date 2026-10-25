@@ -12,14 +12,14 @@ The converse is stronger than a statement that one particular purity estimator h
 
 ## 2. Why a logarithmic budget is the relevant scale
 
-For local depolarization, define $b_i=1-\eta_i^2$ and $B_n=\sum_i b_i$. The channel parameter factorizes:
+For local depolarization, define $`b_i=1-\eta_i^2`$ and $`B_n=\sum_i b_i`$. The channel parameter factorizes:
 
 ```math
 \kappa_n=\prod_i\left(1-\frac{b_i}{2}\right)
 \le e^{-B_n/2}.
 ```
 
-The all-copy converse therefore requires a number of examples at least exponential in $B_n$ up to a constant in the exponent. An exponential in the total budget is polynomial in the number of qubits precisely when that budget is logarithmic.
+The all-copy converse therefore requires a number of examples at least exponential in $`B_n`$ up to a constant in the exponent. An exponential in the total budget is polynomial in the number of qubits precisely when that budget is logarithmic.
 
 The constructive side reaches the same boundary for a different reason. A depolarizing channel is a random Pauli channel. When the errors on two copies coincide, their contribution to the output purity is exactly one. All other terms are nonnegative. The probability that the two error strings coincide gives a uniform purity floor
 
@@ -27,13 +27,13 @@ The constructive side reaches the same boundary for a different reason. A depola
 A_n=\prod_i\frac{1+3\eta_i^2}{4}\ge4^{-B_n}.
 ```
 
-For logarithmic $B_n$, this signal is inverse polynomial, whereas the null purity $2^{-n}$ is exponentially small. Pair measurements can resolve the gap with polynomially many copies. This argument holds for entangled pure inputs and does not require different Pauli errors to produce orthogonal states.
+For logarithmic $`B_n`$, this signal is inverse polynomial, whereas the null purity $`2^{-n}`$ is exponentially small. Pair measurements can resolve the gap with polynomially many copies. This argument holds for entangled pure inputs and does not require different Pauli errors to produce orthogonal states.
 
 The two bounds establish the same polynomial boundary without determining the exact optimal exponential rate. The [threshold theorem](threshold.md) states the finite bounds and the regime in which they give matching exponential dependence up to constants.
 
 ## 3. Which resources the positive procedure uses
 
-Each trial compares two received $n$-qubit states. A Bell measurement on each corresponding qubit pair determines the local SWAP eigenvalue; multiplying these signs gives the global SWAP outcome. This uses two registers, $O(n)$ elementary gates and measurements, and $O(n)$ classical operations per trial. Repeating the procedure only needs the current two registers and an accumulated statistic.
+Each trial compares two received $`n`$-qubit states. A Bell measurement on each corresponding qubit pair determines the local SWAP eigenvalue; multiplying these signs gives the global SWAP outcome. This uses two registers, $`O(n)`$ elementary gates and measurements, and $`O(n)`$ classical operations per trial. Repeating the procedure only needs the current two registers and an accumulated statistic.
 
 This implementation assumes the corresponding qubit pairs can interact after acquisition. A geometric architecture may add routing cost. That cost does not weaken the converse, which already permits unrestricted processing. It does require separate accounting when translating the constructive test to a particular device.
 

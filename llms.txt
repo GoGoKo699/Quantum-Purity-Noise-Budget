@@ -21,6 +21,12 @@ Authoritative files:
   general parameter, nonunital outputs and identifiability.
 - science/interpretation.md: physical mechanism, copy and computation resources,
   source access, correlated noise, and limits of quantum/classical comparisons.
+- learning/MILESTONES.md: the project-defined M01-M30 understanding map, with
+  12 background/preliminary and 18 narrative/innovation milestones. Each phase
+  progresses from local objects and arguments to a global synthesis.
+- learning/WATROUS_BRIDGE.md: the single educational anchor, Watrous's The Theory
+  of Quantum Information (2018), with exact source sections, a notation bridge,
+  worked explanations and the missing steps to the canonical project proofs.
 - references/RELATED_WORK.md: primary-source comparison and imported ingredients.
 - references/references.bib: structured bibliographic metadata.
 - verification/README.md: commands, expected output and finite-check scope.
@@ -28,6 +34,10 @@ Authoritative files:
 
 Reader routes:
 - For the scientific story, read model.md, threshold.md and interpretation.md.
+- For study, begin with learning/MILESTONES.md, then use the relevant sections of
+  learning/WATROUS_BRIDGE.md alongside each milestone's canonical science links.
+  The map follows this project's dependencies rather than the book's contents;
+  its targets are common to readers and do not record an individual's progress.
 - For the converse, read model.md and channel_bound.md, including the exact
   support and error conventions. Then compare the relevant source in RELATED_WORK.md.
 - For an implementable test, read constructive_test.md and its known-budget
@@ -66,8 +76,6 @@ Scientific distinctions to preserve:
   are inherited. Read the explicit attribution before making originality claims.
 - Finite double-precision checks support the tested formulas and examples;
   they do not prove all-dimension results or establish external peer review.
-
-Learning entrypoints:
-- learning/WATROUS_BRIDGE.md: single selected anchor John Watrous, The Theory of Quantum Information (2018); Chapters 2, 3, 7, notation translation and local proof bridge.
-- learning/MILESTONES.md: exactly 30 project-intrinsic targets; 14 background/preliminaries and 16 narrative/innovation; dependencies, conceptual connections and science/source pointers.
-- For study, use the milestone map with the Watrous bridge; the personal coaching protocol and learner records are not in this repository.
+- Watrous is the sole educational anchor. Primary research references remain
+  essential for attribution and proof ingredients. Distinguish textbook
+  foundations, the bridge's local explanations and the canonical full proofs.
